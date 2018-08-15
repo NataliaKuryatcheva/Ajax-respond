@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Компания</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-100 header">
+                <a class="logo" href="">
+                    <img src="images/logo.png" alt="">
+                    <div class="logo-text">
+                        <p>HoneyHunters</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-120 mail">
+                <img src="images/mail.png" alt="">
+            </div>
+
+            <div class="col-lg-120 comment">
+                <form method="post" action="" id="ajax-form">
+                    <div class="left col-lg-60">
+                        <div class="name">
+                            <p>Имя <span>*</span></p>
+                            <input type="text" name="name">
+                        </div>
+
+                        <div class="email">
+                            <p>E-Mail <span>*</span></p>
+                            <input type="text" name="email">
+                        </div>
+                    </div>
+
+                    <div class="right col-lg-60">
+                        <p>Комментарий <span>*</span></p>
+                        <textarea name="comment"></textarea>
+                    </div>
+
+                    <input id="btn" type="submit" value="Записать">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="comments">
+        <div class="container">
+            <div class="row">
+                <h3>Выводим комментарии</h3>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-60 footer-logo">
+                <a class="logo" href="">
+                    <img src="images/logo.png" alt="">
+                    <div class="footer-text">
+                        <p>HoneyHunters</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-g-60 footer-social">
+                <a href="http://vk.com" target="_blank">
+                    <img src="images/vk.png" alt="">
+                </a>
+                <a href="http://facebook.com" target="_blank">
+                    <img src="images/fb.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

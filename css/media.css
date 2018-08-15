@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*вертикальный телефон*/
+@media only screen and (max-width: 460px) {
+  body > main .catalog .catalog-item {
+    width: 200px;
+    height: 325px; }
+  body > footer {
+    bottom: -60%; } }
+/*горизонтальный телефон*/
+/*весь телефон*/
+@media only screen and (max-width: 767px) {
+  body > header nav {
+    display: none; }
+  body > main #slider .container .slider .owl-carousel .owl-nav {
+    display: none; } }
+/*вертикальный планшет*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body > header nav {
+    display: none; }
+  body > main .catalog .catalog-item {
+    width: 180px; }
+  body > footer .container {
+    width: 95%; } }
+/*горизонтальный планшет*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body > header nav ul {
+    padding: 0 10%;
+    list-style: none; }
+    body > header nav ul li {
+      padding: 0 20px; }
+      body > header nav ul li a {
+        font-size: 24px; } }
+/*весь планшет*/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  > main #slider .container .slider .owl-carousel .owl-nav {
+    display: none; } }
+/*десктоп*/
+
+/*# sourceMappingURL=media.css.map */
