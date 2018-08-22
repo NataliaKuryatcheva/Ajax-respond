@@ -1,28 +1,29 @@
 $( document ).ready(function() {
-    // $("#btn").click(
-    //     function(){
-    //         sendAjaxForm('comments', 'ajax_form', 'action_ajax_form.php');
-    //         return false;
-    //     }
-    // );
-
-    // alert("ХОП ХЕЙ ЛАЛАЛЕЙ НЕТУ ДЕНЕГ НЕТ ИДЕЙ");
-
     $("#ajax-form").submit(function (e) {
         $.ajax({
             url:     'action_ajax_form.php', //url страницы (action_ajax_form.php)
             type:     "POST", //метод отправки
             data: $("#ajax-form").serialize(),  // Сеарилизуем объект
             dataType: "JSON",
+
             success: function(response) { //Данные отправлены успешно
-                if (response.status =='error') {
-                    $('input[name="name"]').after("<span class=\"error\"> " + response.name + " </span>")
-                    $('input[name="email"]').after("<span class=\"error\"> " + response.email + " </span>")
-                    $('textarea[name="comment"]').after("<span class=\"error\"> " + response.comment + " </span>")
+                if ($("#ajax-form .error").length > 0) {
+                    $( "#ajax-form .error" ).remove();
+                }
+
+                if (response.status == 'error') {
+                    $('input[name="name"]').after("<span class=\"error\"> " + response.name + " </span>");
+                    $('input[name="email"]').after("<span class=\"error\"> " + response.email + " </span>");
+                    $('textarea[name="comment"]').after("<span class=\"error\"> " + response.comment + " </span>");
+                } else if (response.status == 'success') {
+                    console.log(response.content);
+
+                    // for () {}
+
+                    // $('#comments').html();
                 }
             },
             error: function(response) { // Данные не отправлены
-                // $('#comments').html('Ошибка. Данные не отправлены.');
                 console.log(response);
             }
         });
